@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
       node.vm.hostname = "centos-vm-#{i}"
 
       # Настройка виртуальной сети, чтобы машины видели друг друга
-      node.vm.network "private_network", type: "dhcp"
+      node.vm.network "public_network"
 
       # Конфигурация гипервизора VirtualBox
       node.vm.provider "virtualbox" do |vb|
